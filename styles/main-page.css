@@ -1,0 +1,1556 @@
+:root{
+  --box-shadow: 0.1rem 0.1rem 0.3rem rgba(0,0,0, 0.12);
+  --border-radius: 1rem;
+  --hover-bg-color: rgb(240,242,245);
+}
+
+@media (max-width: 990px){
+  .tooltip{
+    display: none !important;
+  }
+}
+
+.main-section-container{
+  flex: 1;
+  max-width: 74.4rem;
+  min-width: 0;
+  padding: 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.main-section-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media (min-width: 899.1px){
+  .main-section-container{
+    padding: 0 3.2rem;
+  }
+}
+
+.posts-store-container{
+  justify-self: center;
+  width: 100%;
+  min-width: 30rem;
+  max-width: 59rem;
+  height: 100%;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.stories-container{
+  width: 100%;
+  display: flex;
+  min-width: 0;
+  gap: 1rem;
+}
+
+.story-bar-user,
+.story-bar-channel{
+  height: 24rem;
+  width: 14.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.story-bar-user:hover,
+.story-bar-channel:hover{
+  filter: brightness(85%);
+}
+
+.story-bar-user:hover .story-bar-user-picture,
+.story-bar-channel:hover .story-bar-channel-picture{
+  transform: scale(1.02);
+}
+
+.story-bar-user-picture-container{
+  height: 19.2rem;
+}
+
+.story-bar-user-picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.30s;
+}
+
+.story-bar-user-create-container{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+
+.create-icon{
+  position: absolute;
+  top: -1.5rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem;
+  background-color: white;
+  border-radius: 2.5rem;
+}
+
+.create-story{
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 0.7rem;
+}
+
+.tooltip-channel-logo{
+  object-fit: cover;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  border: 0.3rem solid rgb(8,102,255);
+  top: 1rem;
+  left: 0.5rem;
+  z-index: 1;
+}
+.tooltip-channel-name-story {
+  position: absolute;
+  font-size: 1.4rem;
+  bottom: 0.7rem;
+  color: white;
+  font-weight: 400;
+  left: 0.5rem;
+  z-index: 1;
+}
+
+.story-bar-channel-picture-container {
+  height: 100%;
+}
+
+.story-bar-channel-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.30s ease;
+}
+
+.posts-container {
+  min-width: 0;
+  max-width: 50rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.whats-on-your-mind-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.whats-on-your-mind-container-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.whats-on-your-mind-picture-container {
+  height: 4.5rem;
+  width: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whats-on-your-mind-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.whats-on-your-mind-picture:hover {
+  filter: brightness(85%);
+}
+
+.whats-on-your-mind-search-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.whats-on-your-mind-search {
+  flex: 1;
+  padding: 1rem 0 1rem 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  border-radius: 4rem;
+  background-color: rgb(240, 242, 245);
+  color: rgb(101, 103, 107);
+  border: none;
+  outline: none;
+}
+
+.hr-post {
+  height: 0.2rem;
+  background-color: rgb(195, 182, 182);
+  border: none;
+  width: 100%;
+}
+
+.icons-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.live-and-video-container,
+.photo-and-video-container,
+.feeling-and-activities-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  gap: 0.5rem;
+  color: rgb(101, 103, 107);
+  font-weight: 400;
+}
+
+.live-and-video-container:hover,
+.photo-and-video-container:hover,
+.feeling-and-activities-container:hover {
+  background-color: rgb(240, 242, 245);
+}
+.live-and-video-flex-image,
+.photo-and-video-flex-image,
+.feeling-and-activities-flex-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-video-image{
+  width: 3.7rem;
+  height: 3.7rem;
+  object-fit: cover;
+}
+
+.photo-video-image{
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+}
+
+.feeling-and-activities-image{
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+}
+
+@media(max-width: 400px){
+  .feeling-and-activities-container{
+    display: none;
+  }
+}
+
+.may-know-container{
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 1rem 0;
+  overflow-x: auto;
+}
+
+.may-know-container-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  min-width: 0;
+}
+
+.may-know-heading{
+  color: rgb(101, 103, 107);
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: default;
+}
+
+.may-know-header-more-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: 0.15s ease;
+}
+
+.three-dots{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.may-know-header-more-container:hover,
+.see-all:hover,
+.see-more-groups:hover{
+  background-color: rgb(240, 242, 245);
+}
+
+.may-know-body{
+  padding: 2rem 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.channel-bar,
+.group-bar{
+  flex-shrink: 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-bar{
+  width: 22.2rem;
+}
+
+.first-bar{
+  margin-left: 1rem;
+}
+
+.last-bar{
+  margin-right: 1rem;
+}
+
+.channel-bar-picture-container,
+.group-bar-picture-container{
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.channel-bar-picture-container{
+  height: 20rem;
+}
+
+.channel-bar-picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tooltip-cancel {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  color: white;
+  background-color: black;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  opacity: 0.4;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+
+.tooltip-cancel:hover {
+  filter: brightness(80%);
+}
+
+.channel-bar-info-container,
+.group-bar-info-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.channel-bar-info-container {
+  height: 12rem;
+}
+
+.channel-bar-name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.channel-bar-name {
+  font-weight: 500;
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.channel-bar-name:hover {
+  text-decoration: underline;
+}
+
+.blue-tick {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.add-friend-container,
+.join-group-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.add-friend-container {
+  height: 3.2rem;
+  color: rgb(26, 112, 213);
+  background-color: rgb(235, 245, 255);
+}
+
+.add-friend-container:hover,
+.join-group-container:hover {
+  filter: brightness(97%);
+}
+
+.add-friend-logo {
+  width: 1.6rem;
+  height: 1.6rem;
+  object-fit: cover;
+}
+
+.channel-bar-mutuals {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mutual-pfp {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mutuals {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(101, 103, 107);
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-mutuals-details {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.mutuals:hover .tooltip-mutuals-details {
+  opacity: 0.8;
+}
+.see-all,
+.see-more-groups {
+  padding: 0.7rem 0px;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 100, 209);
+  font-size: 1.7rem;
+  transition: all 0.15s ease;
+  margin: 0px 0.5rem;
+}
+
+.facebook-post {
+  padding: 1rem 0px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+.facebook-post-header {
+  display: flex;
+  margin: 0px 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.facebook-post-pic-container,
+.facebook-post-pic-square-container {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.facebook-post-pic {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.facebook-post-pic:hover {
+  filter: brightness(85%);
+}
+
+.facebook-post-account-details-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.facebook-post-account-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.facebook-post-account-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.facebook-account-name {
+  position: relative;
+}
+
+.facebook-account-name span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: text-decoration 0.15s;
+  font-weight: 500;
+}
+
+.facebook-account-name:hover {
+  text-decoration: underline;
+}
+
+.upload-time-container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: rgb(130, 132, 135);
+}
+
+.upload-time {
+  position: relative;
+}
+
+.member-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.member-name:hover {
+  text-decoration: underline;
+}
+
+.tooltip-upload-time,
+.tooltip-public {
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(55, 53, 53);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: all 0.15s ease;
+  pointer-events: none;
+}
+.tooltip-upload-time{
+  top:100%;
+  left:50%;
+  transform: translate(-50%,0);
+}
+.upload-time:hover .tooltip-upload-time{
+  opacity: 1;
+}
+.public-container{
+  width: 1.3rem;
+  height: 1.3rem;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.tooltip-public{
+  bottom:100%;
+  left:50%;
+  transform: translate(-50%,0);
+}
+.public-container:hover .tooltip-public{
+  opacity: 1;
+}
+.public{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.facebook-post-three-dots{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.facebook-post-three-dots img{
+  width:2rem;
+  height:2rem;
+  object-fit: cover;
+}
+.facebook-post-three-dots:hover{
+  background-color: var(--hover-bg-color);
+}
+.tooltip-for-post-pic,
+.tooltip-for-post-account-name,
+.tooltip-for-comment-channel,
+.tooltip-for-post-square{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  padding: 2rem;
+  gap: 2rem;
+  background-color: white;
+  z-index: 9;
+  box-shadow:var(--box-shadow);
+  border-radius:var(--border-radius);
+  transition: all 0.15s ease;
+  opacity:0;
+  pointer-events: none;
+  cursor:default;
+  font-weight: 400 !important;
+  color: black !important;
+  font-size: 1.6rem !important;
+  white-space: nowrap;
+}
+.tooltip-for-post-pic-top-container{
+  display: flex;
+  white-space: nowrap;
+  width: fit-content;
+  gap: 1rem;
+}
+.tooltip-pic-container{
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+}
+.tooltip-pic-container:hover{
+  filter: brightness(85%);
+}
+.tooltip-pic{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.tooltip-info-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tooltip-account-name-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.tooltip-account-name{
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition:all 0.15s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tooltip-account-name > img {
+  height: 2.3rem;
+  width: 2.3rem;
+}
+
+.tooltip-account-name:hover {
+  text-decoration: underline;
+}
+
+.tooltip-account-history-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.history-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: cover;
+}
+
+.history-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bold-text {
+  font-weight: 500;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.bold-text:hover {
+  text-decoration: underline;
+}
+
+.tooltip-for-post-pic-bottom-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.message,
+.follow,
+.add-friend {
+  width: 15rem;
+  padding: 0.8rem 0;
+  background-color: rgb(228, 230, 235);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.message:hover,
+.follow:hover,
+.three-dots-tooltip-container:hover {
+  filter: brightness(95%);
+}
+
+.follow,
+.add-friend {
+  color: white;
+  background-color: rgb(8, 102, 255);
+}
+
+.message-pic,
+.follow-pic,
+.add-friend-pic {
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: cover;
+}
+
+.user-container {
+  padding: 1rem 1.5rem;
+  background-color: rgb(228, 230, 235);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: cover;
+}
+
+.user-container::before {
+  content: 'Add Friend';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -4.2rem;
+  left: -1.5rem;
+  padding: 1rem;
+  background-color: rgb(51, 50, 50);
+  z-index: 9;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.user-container:hover::before {
+  opacity: 0.95;
+}
+
+.three-dots-tooltip-container {
+  background-color: rgb(228, 230, 235);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+
+.three-dots-pic {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+.post-caption {
+  margin: 1rem;
+}
+
+.facebook-image-container {
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black;
+}
+/* completed  */
+.facebook-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.facebook-image-container > video{
+  max-height: 100%;
+  width: 100%;
+  aspect-ratio: 5/3;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.facebook-image:hover{
+  transform: scale(1.02);
+}
+.facebook-post-stats{
+  margin: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.facebook-emoji-container{
+  display: flex;
+  align-items: center;
+}
+.first-emoji-container{
+  height: 1.9rem;
+  width: 1.9rem;
+  outline: 0.1rem solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.second-emoji-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-left: -0.1rem;
+  border-radius: 50%;
+  position: relative;
+}
+.amount-reacts-container{
+  position: relative;
+  margin-left: 0.5rem;
+  color: rgb(101,103,107);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.amount-reacts-container:hover{
+  text-decoration: underline;
+}
+.first-emoji-tooltip-container,
+.second-emoji-tooltip-container,
+.amount-tooltip-container,
+.share-tooltip-container,
+.comment-tooltip-container{
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  white-space: nowrap;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: black;
+  padding: 1rem 2rem 1rem 1rem;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  pointer-events:none;
+  opacity:0;
+  transition: opacity 0.15s;
+  z-index: 1;
+}
+.emoji-tooltip-head{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.7rem;
+  gap: 1rem;
+}
+.emoji-tooltip-head > img{
+  height: 1.8rem;
+  width: 1.8rem;
+  object-fit: cover;
+}
+.first-emoji-container > img,
+.second-emoji-container > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.first-emoji-container:hover .first-emoji-tooltip-container,
+.second-emoji-container:hover .second-emoji-tooltip-container,
+.amount-reacts-container:hover .amount-tooltip-container,
+.comment-container:hover .comment-tooltip-container,
+.share-container:hover .share-tooltip-container{
+  opacity: 1;
+}
+.facebook-comments-replies-container{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 0.5rem;
+}
+.comment-container,
+.share-container{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  color: rgb(101,103,107);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  gap: 0.2rem;
+  position: relative;
+}   
+.comment-container > img{
+  width: 1.9rem;
+  height: 1.9rem;
+  object-fit: cover;
+}
+.share-container > img{
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: cover;
+}
+.comment-container:hover,
+.share-container:hover{
+  text-decoration: underline;
+}
+.line-post{
+  margin: 1rem 1rem;
+}
+.icons-row-post{
+  margin: 0rem 1rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.like-icon-container,
+.comment-icon-container,
+.share-icon-container{
+  flex: 1;
+  max-width: 15rem;
+  padding: 0.5rem 0rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  font-size: 1.4rem;
+  color: rgb(101,103,107);
+  gap: 0.5rem;
+}
+.like-icon-container:hover,
+.comment-icon-container:hover,
+.share-icon-container:hover{
+  background-color: rgb(240,242,245);
+}
+.like-icon-container > img,
+.comment-icon-container > img,
+.share-icon-container > img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+.comment-header{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0rem 1rem 1rem 1rem;
+}
+.user-pic-container-comment{
+  position: relative;
+  display:flex;
+}
+.comment-user-pic{
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border-radius:50%;
+  filter: brightness(95%);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.comment-user-pic:hover{
+  filter: brightness(85%);
+}
+.arrow{
+  position: absolute;
+  bottom: -0.3rem;
+  right: -0.5rem;
+  background-color: rgb(228,230,235);
+  z-index:1;
+  padding: 0.3rem;
+  border-radius:50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: cover;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.arrow:hover{
+  filter: brightness(95%);
+}
+.write-an-answer-container{  
+  flex: 1;
+  display: flex;
+  padding: 0.6rem 0rem 0.6rem 1.5rem;
+  border-radius:10rem;
+  background-color: rgb(240,242,245);
+  color: rgb(101,103,107);
+}
+.write-an-answer {
+  flex: 1;
+  padding: 0;
+  min-width: 0;
+  background-color:transparent;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+}
+.answers-emojis{
+  width:fit-content;
+  display:flex;
+  align-items: center;
+}
+.emoji-container{
+  width: 3rem;
+  height: 3rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0.5rem;
+  position: relative;
+}
+.emoji-container:hover{
+  background-color: rgb(212, 212, 212);
+}
+.emoji-pic{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.tooltip-emoji,
+.tooltip-comments-container-three-dots{
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%,0%);
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  opacity:0;
+  transition: all 0.15s ease; 
+  pointer-events: none;
+}
+.emoji-container:hover .tooltip-emoji{
+  opacity: 0.77;
+}
+.comment-container-channel{
+  display:flex;
+  flex-direction: column;
+  margin:0 1rem;
+}
+.comment-channel-top-container{
+  display: flex;
+  gap: 0.5rem;
+}
+.comment-channel-pic-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
+}
+.comment-channel-pic {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.15s ease; 
+}
+.comment-channel-pic:hover{
+  filter: brightness(85%);
+}
+.message-large,
+.add-friend{
+  width: 17rem;
+}
+.add-friend{
+  width: 17rem;
+}
+.add-friend:hover{
+  filter: brightness(95%);
+}
+.tooltip-bottom-gap{
+  gap: 1rem;
+}
+.comment-channel-info-container{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.comments-container-three-dots{
+  display: none;
+}
+.comment-channel-info-container:hover .comments-container-three-dots{
+  display:flex;
+  opacity: 1;
+  pointer-events: visible;
+}
+.comments-container-three-dots{
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  opacity:1;
+  pointer-events:none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+.comments-container-three-dots:hover{
+  background-color: rgb(240,242,245);
+}
+.comments-container-three-dots:hover .tooltip-comments-container-three-dots{
+  animation:displayTooltip forwards;
+  animation-delay: 0.3s;
+}
+@keyframes displayTooltip{
+  to{
+    opacity:0.77;
+  }
+}
+.comments-three-dots {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+.comment-channel-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 2rem;
+  gap: 0.5rem;
+  background-color: rgb(240,242,245);
+  position: relative;
+  cursor: pointer;
+}
+.comment-channel-name-container{
+  display: flex;
+  align-items: center;
+}
+.comment-channel-name{
+  transition: all 0.15s ease;
+  position: relative;
+}
+.comment-channel-name:hover {
+  text-decoration: underline;
+}
+.comment-channel-name span{
+  font-weight: 500;
+}
+.emojies-comment-container-channel{
+  position: absolute;
+  border-radius: 2rem;
+  bottom: -1.8rem;
+  right: -0.5rem;
+  padding: 0.3rem;
+  background-color:white;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow:var(--box-shadow);
+  transition:all 0.15s ease;
+  z-index:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(101,103,107);
+}
+.emojies-comment-container-channel:hover{
+  filter: brightness(95%);
+}
+.emojies-comment-container-channel:hover .tooltip-comment-channel-emojies{
+  opacity: 1;
+}
+.tooltip-comment-channel-emojies{
+  position: absolute;
+  top:100%;
+  left:50%;
+  transform: translate(-50%,0%);
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  gap: 0.5rem;
+  pointer-events:none;
+  opacity: 0;
+  transition: all 0.15s ease;
+}
+.tooltip-comment-channel-emojies-head{
+  display: flex;
+  align-items: center;
+}
+.black-outline{
+  outline-color: black;
+}
+.comment-text{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: auto;
+}
+.comment-channel-bottom-container{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 5rem;
+}
+.bottom-text{
+  color: rgb(101,103,107);
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.bottom-text:hover{
+  text-decoration: underline;
+}
+.upload-time-comment{
+  position: relative;
+  font-size: 1.3rem;
+  color: rgb(130,132,135);
+  cursor: pointer;
+}
+.upload-time-comment:hover .tooltip-upload-time{
+  opacity: 1;
+}
+.view-all-replies-container{
+  margin: 1rem 0rem 0rem 5rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: rgb(101,103,107);
+  font-weight: 500;
+  font-size: 1.7rem;
+  hyphens: auto;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.view-all-replies-container > img{
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+}
+.view-all-replies-container:hover{
+  text-decoration: underline;
+}
+.more-answers{
+  display: flex;
+  margin: 1rem;
+  color: rgb(101,103,107);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.more-answers:hover{
+  text-decoration: underline;
+}
+.group-bar {
+  width: 31rem;
+}
+.group-bar-picture-container{
+  height: 13.5rem;
+}
+.group-bar-info-container{
+  height: 17rem;
+}
+.group-bar-info-upper{
+  display: flex;
+  flex-direction: column;
+}
+.group-bar-name{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.group-bar-name:hover{
+  text-decoration: underline;
+}
+.members-container{
+  display: flex;
+  align-items: center;
+  color: rgb(101,103,107);
+  gap: 0.2rem;
+  cursor: default;
+}
+.private-group{
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 0.5rem;
+  color: rgb(101,103,107);
+  cursor: default;
+}
+.private-group > img{
+  width: 1.3rem;
+  height: 1.3rem;
+  object-fit: cover;
+}
+.join-group-container{
+  height: 4rem;
+  background-color: rgb(8, 102, 255);
+  color: white;
+}
+.square-pic{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+}
+.square-pic:hover{
+  filter: brightness(85%);
+}
+.circle-image-container{
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top:70%;
+  left:60%;
+  border: 1px solid white;
+}
+.circle-image-inner-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.circle-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.circle-image:hover{
+  filter: brightness(85%);
+}
+.tooltip-square-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.extra-right-margin{
+  margin-right: 5rem;
+}
+.accounts-circles-container{
+  display: flex;
+  align-items: center;
+}
+.circle-pic-container{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.circle-pic-container > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.circle-pic-container:hover{
+  filter: brightness(85%);
+}
+.circle-pic-container:not(:first-child){
+  margin-left: -0.5rem;
+}
+.circle-pic-container:nth-child(1){
+  z-index: 7;
+}
+.circle-pic-container:nth-child(2){
+  z-index: 6;
+}
+.circle-pic-container:nth-child(3){
+  z-index: 5;
+}
+.circle-pic-container:nth-child(4){
+  z-index: 4;
+}
+.circle-pic-container:nth-child(5){
+  z-index: 3;
+}
+.circle-pic-container:nth-child(6){
+  z-index: 2;
+}
+.circle-pic-container:nth-child(7){
+  z-index: 1;
+}
+.visit-group{
+  padding: 0.8rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(225, 238, 255);
+  border-radius: 0.5rem;
+  margin-right: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(100, 100, 229);
+  transition: all 0.15s ease;
+}
+.visit-group:hover{
+  filter: brightness(95%);
+}
+.facebook-post-pic-square-container:has(.circle-image-container:hover) .tooltip-post-square{
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
